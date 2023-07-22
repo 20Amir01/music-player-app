@@ -1,0 +1,26 @@
+[1mdiff --git a/notes.txt b/notes.txt[m
+[1mindex a03aab0..e2bee29 100644[m
+[1m--- a/notes.txt[m
+[1m+++ b/notes.txt[m
+[36m@@ -1,20 +1,6 @@[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-handle open and close navbar//done[m
+[31m-fix play song problem//done[m
+[31m-prev and next handle//done[m
+[31m-handle to go next song if song has finished//done[m
+[31m-slider for music volume//logic done [m
+[31m-slider for music timing//done[m
+[31m-search button in search input//done[m
+[31m-add toggle button for muted attr;//done[m
+[31m-[m
+ ///////////////////[m
+ music timer has bug that must be fiexd[m
+[31m-[m
+[31m-[m
+[31m-to up button [m
+[32m+[m[32mfix fix scroll nav bar problem[m
+ //[m
+ loader 404 error pages[m
+ loop and [m

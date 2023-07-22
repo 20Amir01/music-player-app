@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  background-color: #e2e8f0;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.header {
+  /* background-image: url("./assets/music-banner-1@3x.jpg"); */
+  background: #0f0c29;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.musicCover {
+  background-image: url(../assets/headset.jpg);
+
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+/* from codepen  */
+/* input[type="range"] {
+    -webkit-appearance: none;
+    width: 8rem;
+    height: 10px;
+    background-color: #ddd;
+    background-image: linear-gradient(#000000, #000000);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    margin: 0px;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 0px;
+    width: 0px;
+    border-radius: 50%;
+    background: black;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track, input[type=range]::-moz-range-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+from codepen  */
+.toTopAnimation {
+  animation-name: down_to_top;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes down_to_top {
+  from {
+    transform: translateY(200px) rotate(-360deg);
+    opacity: 0;
+
+  }
+
+  to {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 1;
+  }
+}
