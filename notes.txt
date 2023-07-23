@@ -1,8 +1,8 @@
 ///////////////////
 music timer has bug that must be fiexd
-gifix scroll nav bar problem
+change input type range to other form like div width but with onclick
 //
 loader 404 error pages
-loop and 
+loop button
 
 
