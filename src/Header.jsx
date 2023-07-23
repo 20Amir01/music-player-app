@@ -32,9 +32,9 @@ export default function Header({ handleOpenNav }) {
           {/* w-[12rem] sm:[w-16rem] md:w-[20rem] lg:w-[42rem] */}
         </div>
         <div className="flex justify-end items-center rounded-full gap-2 px-2">
-          <div className="overflow-x-hidden flex justify-center max-w-[100px]">
-            <span className="text-slate-800 font-bold overflow-hidden whitespace-nowrap text-ellipsis inline-block w-40">
-              Lorem ipsu
+          <div className="flex justify-center">
+            <span className="text-slate-800 font-bold inline-block">
+            AmirMohammad
             </span>
           </div>
           <div className="w-12 h-12 flex items-center">

@@ -1,14 +1,14 @@
 // import Tailwind from "./pages/Tailwind";
 // import {BrowserRouter,Routes,Route} from "react-router-dom"
 import { musics } from "../data/items";
-import { useEffect, useRef, useState } from "react";
+import {useRef} from "react";
 // import useSound from "use-sound";
 import Footer from "./Footer";
 import MusicList from "./MusicList";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import { useReducer } from "react";
-import chevron_down_icon from "./assets/icons/icons8-chevron-down-24.png"
+// import chevron_down_icon from "./assets/icons/icons8-chevron-down-24.png"
 const initialState = {
   // musicsData: musics,
   musicIsPlay: false,

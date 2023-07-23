@@ -609,11 +609,4 @@ export const posts=[
     {id:6,name:"Night Beat 6",singer:"Dj Alphax",path:"../src/assets/audios/DJ Alphax Night Beat 6.mp3",cover:"../src/assets/audios/covers/DJ Alphax Night Beat 6.jpg"},
     {id:7,name:"We don't talk anymore",singer:"Charlie Puth",path:"../src/assets/audios/Charlie-Puth-We-Don t-Talk-Anymore-(Ft-Selena-Gomez)-320.mp3",cover:"../src/assets/audios/covers/Charlie-Puth-We-Don t-Talk-Anymore-(Ft-Selena-Gomez)-320.jpg"},
     {id:8,name:"Dope",singer:"BTS",path:"../src/assets/audios/Bts-Dope-320.mp3",cover:"../src/assets/audios/covers/Bts-Dope-320.jpg"},
-    {id:8,name:"Dope",singer:"BTS",path:"../src/assets/audios/Bts-Dope-320.mp3",cover:"../src/assets/audios/covers/Bts-Dope-320.jpg"},
-    {id:8,name:"Dope",singer:"BTS",path:"../src/assets/audios/Bts-Dope-320.mp3",cover:"../src/assets/audios/covers/Bts-Dope-320.jpg"},
-    {id:8,name:"Dope",singer:"BTS",path:"../src/assets/audios/Bts-Dope-320.mp3",cover:"../src/assets/audios/covers/Bts-Dope-320.jpg"},
-    {id:8,name:"Dope",singer:"BTS",path:"../src/assets/audios/Bts-Dope-320.mp3",cover:"../src/assets/audios/covers/Bts-Dope-320.jpg"},
-    {id:8,name:"Dope",singer:"BTS",path:"../src/assets/audios/Bts-Dope-320.mp3",cover:"../src/assets/audios/covers/Bts-Dope-320.jpg"},
-    {id:8,name:"Dope",singer:"BTS",path:"../src/assets/audios/Bts-Dope-320.mp3",cover:"../src/assets/audios/covers/Bts-Dope-320.jpg"},
-    {id:8,name:"Dope",singer:"BTS",path:"../src/assets/audios/Bts-Dope-320.mp3",cover:"../src/assets/audios/covers/Bts-Dope-320.jpg"},
   ]
