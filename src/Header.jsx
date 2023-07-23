@@ -10,7 +10,7 @@ Header.propTypes = {
 };
 export default function Header({ handleOpenNav }) {
   return (
-    <div className="w-full h-auto py-1 px-2 bg-slate-200 fixed z-10  max-w-[1360px] drop-shadow-md">
+    <header className="w-full h-auto py-1 px-2 bg-slate-200 fixed z-10  max-w-[1360px] drop-shadow-md">
       <div className="flex h-12 justify-between pl-0 md:pl-56 relative">
         <div className="flex justify-start items-center gap-2">
           <button>
@@ -52,6 +52,6 @@ export default function Header({ handleOpenNav }) {
           </button>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
