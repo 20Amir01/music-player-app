@@ -7,12 +7,29 @@
   margin: 0;
   padding: 0;
 }
-
+html{
+  height:100%;
+}
 body {
 
   background-color: #e2e8f0;
   -webkit-user-select: none;
   user-select: none;
+  overflow-y: hidden;
+  height:100vh
+}
+/* .scroll{
+  overflow-y: scroll;
+} */
+.scroll::-webkit-scrollbar {
+  width: 10px; /* Mostly for vertical scrollbars */
+  height: 10px; /* Mostly for horizontal scrollbars */
+}
+.scroll::-webkit-scrollbar-thumb { /* Foreground */
+  background: #999;
+}
+.scroll::-webkit-scrollbar-track { /* Background */
+  background: #333;
 }
 
 .header {
@@ -64,10 +81,10 @@ nav ul li {
     border: none;
     background: transparent;
   }
-from codepen  */
-.toTopAnimation {
+/*from codepen  */
+/* .toTopAnimation {
   animation-name: down_to_top;
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -75,7 +92,7 @@ from codepen  */
 
 @keyframes down_to_top {
   from {
-    transform: translateY(200px) rotate(-360deg);
+    transform: translateY(150px) rotate(-360deg);
     opacity: 0;
 
   }
@@ -84,4 +101,4 @@ from codepen  */
     transform: translateY(0px) rotate(0deg);
     opacity: 1;
   }
-}
+} */

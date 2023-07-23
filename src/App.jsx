@@ -94,31 +94,31 @@ function App() {
     await dispatch({ type: "pauseSong" });
     await dispatch({ type: "playSong" });
   }
-  const [toTopBtnVisible, setToTopBtnVisible] = useState(false);
-  const goTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
-        setToTopBtnVisible(true);
-      } else {
-        setToTopBtnVisible(false);
-      }
-    });
-  }, [toTopBtnVisible]);
+  // const [toTopBtnVisible, setToTopBtnVisible] = useState(false);
+  // const goTop = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // };
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     if (window.scrollY > 200) {
+  //       setToTopBtnVisible(true);
+  //     } else {
+  //       setToTopBtnVisible(false);
+  //     }
+  //   });
+  // }, [toTopBtnVisible]);
   return (
     <div className="relative flex justify-between font-mono mx-auto min-h-screen max-w-[1360px]">
-      <div
+      {/* <div
         className={`right-5 bottom-5 ${
           toTopBtnVisible ? "fixed toTopAnimation":"hidden"
         } z-50`}
       >
         <button onClick={goTop} className="bg-slate-500 p-2 rounded-full rotate-180"><img src={chevron_down_icon}></img></button>
-      </div>
+      </div> */}
       <Header handleOpenNav={handleOpenNav}></Header>
       <Sidebar isOpenNav={isOpenNav}></Sidebar>
       <MusicList

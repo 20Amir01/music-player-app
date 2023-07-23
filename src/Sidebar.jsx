@@ -19,7 +19,7 @@ Nav.propTypes={
 }
 function Nav({className}) {
   return(
-    <div className={`bg-gray-300 w-60 min-h-screen justify-start items-start text-center font-mono p-10 z-50 md:z-10 ${className}`}>
+    <div className={`bg-gray-300 w-60 h-screen justify-start items-start text-center font-mono p-10 z-50 md:z-10 ${className}`}>
     <nav>
       <Logo></Logo>
       <div className="flex justify-start my-2">

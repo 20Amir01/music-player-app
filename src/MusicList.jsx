@@ -34,36 +34,38 @@ export default function MusicList({
     }
   }, [musicIsPlay, audioRef, dispatch, playMusic]);
   return (
-    <div className="px-10 py-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 auto-rows-min gap-5 w-full h-min-screen: overflow-scroll">
-      {musics.map((music, index) => {
-        return (
-          <div key={music.id}>
-            <div
-              onClick={() => {
-                dispatch({ type: "currentMusicData", payload: music });
-                dispatch({ type: "musicIndex", payload: index });
-                playMusic();
-              }}
-              className={`relative group ${styles.musicCover} shadow-md rounded-lg bg-cover bg-center cursor-pointer aspect-square flex justify-center items-center`}
-            >
-              <img
-                className="aspect-square rounded-lg"
-                src={music.cover}
-                alt={music.name}
-              ></img>
-              <button className="w-14 h-14 rounded-full hidden animate-pulse group-hover:inline-block absolute">
-                <img src={playIcon}></img>
-              </button>
+    <div className="w-full h-full">
+      <div className="px-10 py-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 auto-rows-min gap-5 overflow-y-auto h-screen scroll">
+        {musics.map((music, index) => {
+          return (
+            <div key={music.id}>
+              <div
+                onClick={() => {
+                  dispatch({ type: "currentMusicData", payload: music });
+                  dispatch({ type: "musicIndex", payload: index });
+                  playMusic();
+                }}
+                className={`relative group ${styles.musicCover} shadow-md rounded-lg bg-cover bg-center cursor-pointer aspect-square flex justify-center items-center`}
+              >
+                <img
+                  className="aspect-square rounded-lg"
+                  src={music.cover}
+                  alt={music.name}
+                ></img>
+                <button className="w-14 h-14 rounded-full hidden animate-pulse group-hover:inline-block absolute">
+                  <img src={playIcon}></img>
+                </button>
+              </div>
+              <span className="text-slate-800 font-bold block text-md">
+                {music.name}
+              </span>
+              <span className="text-slate-600 font-bold block text-sm">
+                by {music.singer ? music.singer : "unknown"}
+              </span>
             </div>
-            <span className="text-slate-800 font-bold block text-md">
-              {music.name}
-            </span>
-            <span className="text-slate-600 font-bold block text-sm">
-              by {music.singer ? music.singer : "unknown"}
-            </span>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }
