@@ -1,8 +1,0 @@
-///////////////////
-music timer has bug that must be fiexd
-change input type range to other form like div width but with onclick
-//
-loader 404 error pages
-loop button
-
-
