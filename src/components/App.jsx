@@ -1,8 +1,5 @@
-// import Tailwind from "./pages/Tailwind";
-// import {BrowserRouter,Routes,Route} from "react-router-dom"
-import { musics } from "../data/items";
-import {useRef} from "react";
-// import useSound from "use-sound";
+import { musics } from "../../data/items";
+import { useRef } from "react";
 import Footer from "./Footer";
 import MusicList from "./MusicList";
 import Header from "./Header";
@@ -131,7 +128,8 @@ function App() {
         audioRef={audioRef}
         dispatch={dispatch}
         playMusic={playMusic}
-      ></MusicList>
+      >
+      </MusicList>
       <Footer
         musicIsPlay={musicIsPlay}
         setMusicIsPlay={dispatch}

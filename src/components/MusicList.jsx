@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
-import { musics } from "../data/items";
-import styles from "./App.module.css";
-import playIcon from "./assets/icons/icons8-play-button-circled-50-white.png";
+import { musics } from "../../data/items";
+import playIcon from "../assets/icons/icons8-play-button-circled-50-white.png";
 import { useEffect } from "react";
 MusicList.propTypes = {
   children: PropTypes.node,
@@ -15,6 +14,7 @@ MusicList.propTypes = {
   playMusic: PropTypes.func,
 };
 export default function MusicList({
+  children,
   musicIsPlay,
   // currentMusicData,
   dispatch,
@@ -36,6 +36,9 @@ export default function MusicList({
   return (
     <div className="w-full h-full">
       <div className="px-10 py-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 auto-rows-min gap-5 overflow-y-auto h-screen scroll">
+        <div className="col-span-2 md:col-span-3 lg:col-span-4 xl:col-span-5">
+          {children}
+        </div>
         {musics.map((music, index) => {
           return (
             <div key={music.id}>
@@ -45,10 +48,10 @@ export default function MusicList({
                   dispatch({ type: "musicIndex", payload: index });
                   playMusic();
                 }}
-                className={`relative group ${styles.musicCover} shadow-md rounded-lg bg-cover bg-center cursor-pointer aspect-square flex justify-center items-center`}
+                className={`relative group shadow-md rounded-lg bg-cover bg-center cursor-pointer aspect-square flex justify-center items-center`}
               >
                 <img
-                  className="aspect-square rounded-lg"
+                  className="aspect-square rounded-xl"
                   src={music.cover}
                   alt={music.name}
                 ></img>

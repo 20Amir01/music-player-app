@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-import backwardHistoryIcon from "./assets/icons/icons8-back-50.png";
-import forwardHistoryIcon from "./assets/icons/icons8-forward-50.png";
-import arrowDownIcon from "./assets/icons/icons8-expand-arrow-50.png";
-import user from "./assets/icons/user.png";
-import menu from "./assets/icons/icons8-menu-48.png";
-import searchIcon from "./assets/icons/icons8-search-40.png";
+import backwardHistoryIcon from "../assets/icons/icons8-back-50.png";
+import forwardHistoryIcon from "../assets/icons/icons8-forward-50.png";
+import arrowDownIcon from "../assets/icons/icons8-expand-arrow-50.png";
+import user from "../assets/icons/user.png";
+import menu from "../assets/icons/icons8-menu-48.png";
+import searchIcon from "../assets/icons/icons8-search-40.png";
 Header.propTypes = {
   handleOpenNav: PropTypes.func,
 };

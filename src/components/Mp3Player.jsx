@@ -1,15 +1,15 @@
 import PropTypes from "prop-types";
-import nextSvg from "./assets/icons/next.svg";
-import playSvg from "./assets/icons/play.svg";
-import prevSvg from "./assets/icons/prev.svg";
-import stopSvg from "./assets/icons/stop.svg";
-import speaker_icon from "./assets/icons/Speaker_Icon.png";
-import mute_icon from "./assets/icons/Mute_Icon.png";
-import cover from "./assets/headset.jpg";
-import { musics } from "../data/items";
+import nextSvg from "../assets/icons/next.svg";
+import playSvg from "../assets/icons/play.svg";
+import prevSvg from "../assets/icons/prev.svg";
+import stopSvg from "../assets/icons/stop.svg";
+import speaker_icon from "../assets/icons/Speaker_Icon.png";
+import mute_icon from "../assets/icons/Mute_Icon.png";
+import cover from "../assets/headset.jpg";
+import { musics } from "../../data/items";
 import { useEffect } from "react";
 import { useReducer } from "react";
-
+import Slider from "@mui/material/Slider";
 const initialState = {
   seekPosition: 0,
   minuteDuration: 0,
@@ -32,7 +32,7 @@ const reducer = (state, action) => {
     case "SEC_DUR":
       return {
         ...state,
-        secondDuration: action.payload===60?0:action.payload,
+        secondDuration: action.payload === 60 ? 0 : action.payload,
       };
     case "MIN_CURR":
       return {
@@ -42,7 +42,7 @@ const reducer = (state, action) => {
     case "SEC_CURR":
       return {
         ...state,
-        currentSeconds: action.payload===60?0:action.payload,
+        currentSeconds: action.payload === 60 ? 0 : action.payload,
       };
   }
 };
@@ -79,12 +79,22 @@ export default function Mp3Player({
     },
     dispatchTimer,
   ] = useReducer(reducer, initialState);
+  const handleVolumeChange = (e) => {
+    audioRef.current.volume = e.target.value / 100;
+  };
+  const handleMusicCurrenttimeChanges = (e) => {
+    // Calculate the seek position by the
+    // percentage of the seek slider
+    // and get the relative duration to the track
+    const seekto = audioRef.current.duration * (e.target.value / 100);
+    // Set the current track position to the calculated seek position
+    audioRef.current.currentTime = seekto;
+  };
   useEffect(() => {
     // if(musicIsPlay===false) return
     const timer = () => {
-      console.log("j")
       // Check if the current track duration is a legible number
-      if (!isNaN(audioRef.current.duration)&&musicIsPlay) {
+      if (!isNaN(audioRef.current.duration) && musicIsPlay) {
         dispatchTimer({
           type: "SEEK_POSITION",
           payload:
@@ -98,9 +108,9 @@ export default function Mp3Player({
         });
         dispatchTimer({
           type: "SEC_CURR",
-          payload:Math.floor(
+          payload: Math.floor(
             audioRef.current.currentTime - currentMinutes * 60
-          ),
+          ) 
         });
 
         dispatchTimer({
@@ -113,10 +123,10 @@ export default function Mp3Player({
         });
       }
     };
-    let test;
-    musicIsPlay?test=setInterval(timer, 1000):clearInterval(test)
+    let timerStart;
+    musicIsPlay ? (timerStart = setInterval(timer, 1000)) : clearInterval(timerStart);
     return () => {
-      clearInterval(test);
+      clearInterval(timerStart);
     };
   }, [
     audioRef,
@@ -126,27 +136,20 @@ export default function Mp3Player({
     currentMinutes,
     dispatch,
     seekPosition,
-    musicIsPlay
+    musicIsPlay,
   ]);
 
   return (
-    <div className={`${isEmptyCurrentMusicData ? "hidden" : "block"}`}>
-      <div>
-        <input
-          value={seekPosition}
-          min="1"
-          max="100"
-          type="range"
-          className="duration-range h-1 z-20 absolute top-0 w-full"
-          onChange={(e) => {
-            // Calculate the seek position by the
-            // percentage of the seek slider
-            // and get the relative duration to the track
-            const seekto = audioRef.current.duration * (e.target.value / 100);
-            // Set the current track position to the calculated seek position
-            audioRef.current.currentTime = seekto;
-          }}
-        />
+    <div className={`relative ${isEmptyCurrentMusicData ? "hidden" : "block"}`}>
+      <div className="w-full h-auto absolute top-[-15px] z-20">
+        <Slider
+            onChange={handleMusicCurrenttimeChanges}
+            value={seekPosition}
+            min={1}
+            max={100}
+            defaultValue={0}
+            sx={{ color:"#334155" }}
+          ></Slider>
       </div>
       <div className="h-full grid grid-cols-1 md:grid-cols-3 w-full bg-slate-200 border-t-2">
         <div className="flex justify-start items-center relative p-1">
@@ -209,9 +212,18 @@ export default function Mp3Player({
 
         <div className="flex justify-between md:justify-end items-center w-full h-full p-5 ">
           <div className="font-bold text-slate-600 p-1">
-          <div className="flex p-1">
-              <p>{`${currentMinutes<10?`0${currentMinutes}`:currentMinutes}:${currentSeconds<10?`0${currentSeconds}`:currentSeconds}`}</p><p>{`/${minuteDuration<10?`0${minuteDuration}`:minuteDuration}:${secondDuration<10?`0${secondDuration}`:secondDuration}`}</p>
-              </div>
+            <div className="flex p-1">
+              <p>{`${
+                currentMinutes < 10 ? `0${currentMinutes}` : currentMinutes
+              }:${
+                currentSeconds < 10 ? `0${currentSeconds}` : currentSeconds
+              }`}</p>
+              <p>{`/${
+                minuteDuration < 10 ? `0${minuteDuration}` : minuteDuration
+              }:${
+                secondDuration < 10 ? `0${secondDuration}` : secondDuration
+              }`}</p>
+            </div>
           </div>
           <div className="flex justify-center items-center gap-3">
             <button
@@ -224,20 +236,18 @@ export default function Mp3Player({
                 src={isMute ? mute_icon : speaker_icon}
               ></img>
             </button>
-            <input
-              className="w-20"
-              // id="metric1"
-              name="metric1"
-              type="range"
-              defaultValue={50}
-              min="0"
-              max="100"
-              onChange={(e) => {
-                // Set the volume according to the
-                // percentage of the volume slider set
-                audioRef.current.volume = e.target.value / 100;
-              }}
-            />
+            <div className="w-14">
+              <Slider
+                onChange={handleVolumeChange}
+                size="small"
+                defaultValue={50}
+                aria-label="Small"
+                valueLabelDisplay="auto"
+                min={0}
+                max={100}
+                sx={{ color:"#334155" }}
+              ></Slider>
+            </div>
           </div>
         </div>
       </div>

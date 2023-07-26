@@ -1,4 +1,4 @@
-import musicLogo from "./assets/icons/note-music-colorful-rainbow.jpg";
+import musicLogo from "../assets/icons/note-music-colorful-rainbow.jpg";
 
 export default function Logo() {
   return (

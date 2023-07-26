@@ -2,36 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-html{
-  height:100%;
+
+html {
+  height: 100%;
 }
+
 body {
 
   background-color: #e2e8f0;
   -webkit-user-select: none;
   user-select: none;
   overflow-y: hidden;
-  height:100vh
+  height: 100vh
 }
+
 /* .scroll{
   overflow-y: scroll;
 } */
 .scroll::-webkit-scrollbar {
-  width: 10px; /* Mostly for vertical scrollbars */
-  height: 10px; /* Mostly for horizontal scrollbars */
+  width: 10px;
+  /* Mostly for vertical scrollbars */
+  height: 10px;
+  /* Mostly for horizontal scrollbars */
   z-index: 1000;
 }
-.scroll::-webkit-scrollbar-thumb { /* Foreground */
+
+.scroll::-webkit-scrollbar-thumb {
+  /* Foreground */
   background: #999;
   z-index: 1000;
 
 }
-.scroll::-webkit-scrollbar-track { /* Background */
+
+.scroll::-webkit-scrollbar-track {
+  /* Background */
   background: #333;
   z-index: 1000;
 
@@ -57,36 +67,10 @@ nav ul li {
   cursor: pointer;
 }
 
-/* from codepen  */
-/* input[type="range"] {
-    -webkit-appearance: none;
-    width: 8rem;
-    height: 10px;
-    background-color: #ddd;
-    background-image: linear-gradient(#000000, #000000);
-    background-size: 70%;
-    background-repeat: no-repeat;
-    border-radius: 4px;
-    margin: 0px;
-  }
-  
-  input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
-    -webkit-appearance: none;
-    height: 0px;
-    width: 0px;
-    border-radius: 50%;
-    background: black;
-    border: none;
-    cursor: pointer;
-  }
-  
-  input[type=range]::-webkit-slider-runnable-track, input[type=range]::-moz-range-track  {
-    -webkit-appearance: none;
-    box-shadow: none;
-    border: none;
-    background: transparent;
-  }
-/*from codepen  */
+.musicCover {
+  background-image: url(./assets/headset.jpg);
+}
+
 /* .toTopAnimation {
   animation-name: down_to_top;
   animation-duration: 0.3s;
@@ -107,3 +91,51 @@ nav ul li {
     opacity: 1;
   }
 } */
+
+.loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 10px solid #64748b;
+  border-top-color: #1d4ed8;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(-360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@font-face {
+  font-family: 'Monoton';
+  src: url(./assets/fonts/Monoton/Monoton-Regular.ttf) format("truetype");
+}
+
+.text-transparent {
+  font-family: 'Monoton';
+  font-size: 6rem;
+  /* background: url(./assets/headset.jpg); */
+  background: #0F2027;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

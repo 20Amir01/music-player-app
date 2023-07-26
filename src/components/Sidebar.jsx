@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import categories from "./assets/icons/categories.png";
-import saved from "./assets/icons/saved.png";
-import home from "./assets/icons/home.png";
+import categories from "../assets/icons/categories.png";
+import saved from "../assets/icons/saved.png";
+import home from "../assets/icons/home.png";
 import Logo from "./Logo";
 Sidebar.propTypes = {
   isOpenNav: PropTypes.bool,
