@@ -1,5 +1,5 @@
 import { musics } from "../../data/items";
-import { useRef } from "react";
+import { useRef,} from "react";
 import Footer from "./Footer";
 import MusicList from "./MusicList";
 import Header from "./Header";
@@ -107,6 +107,8 @@ function App() {
   //     }
   //   });
   // }, [toTopBtnVisible]);
+ 
+
   return (
     <div className="relative flex justify-between font-mono mx-auto min-h-screen max-w-[1360px]">
       {/* <div

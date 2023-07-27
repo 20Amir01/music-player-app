@@ -48,7 +48,7 @@ export default function MusicList({
                   dispatch({ type: "musicIndex", payload: index });
                   playMusic();
                 }}
-                className={`relative group shadow-md rounded-lg bg-cover bg-center cursor-pointer aspect-square flex justify-center items-center`}
+                className={`relative group rounded-lg bg-cover bg-center cursor-pointer aspect-square flex justify-center items-center`}
               >
                 <img
                   className="aspect-square rounded-xl"

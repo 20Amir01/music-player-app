@@ -171,6 +171,7 @@ export default function Mp3Player({
         <div className="flex items-center justify-center h-full">
           <audio
             className="audio w-full h-full bottom-0 z-50 bg-slate-100"
+            // src={musics[musicIndex].path}
             src={musics[musicIndex].path}
             ref={audioRef}
             preload="metadata"
