@@ -16,7 +16,7 @@ export function Music({ music, dispatch, playMusic, index }) {
           dispatch({ type: "musicIndex", payload: index });
           playMusic();
         }}
-        className={`relative group rounded-xl cover-bg cursor-pointer flex justify-center items-center w-50 h-50`}
+        className={`relative group rounded-xl bg-white cursor-pointer flex justify-center items-center w-50 h-50`}
       >
           <img
             className="aspect-square rounded-xl w-50 h-50"
