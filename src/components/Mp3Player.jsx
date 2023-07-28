@@ -148,7 +148,7 @@ export default function Mp3Player({
             min={1}
             max={100}
             defaultValue={0}
-            sx={{ color:"#334155" }}
+            sx={{ color:"black" }}
           ></Slider>
       </div>
       <div className="h-full grid grid-cols-1 md:grid-cols-3 w-full bg-slate-200 border-t-2">
@@ -237,7 +237,7 @@ export default function Mp3Player({
                 src={isMute ? mute_icon : speaker_icon}
               ></img>
             </button>
-            <div className="w-14">
+            <div className="w-14 h-full flex items-center">
               <Slider
                 onChange={handleVolumeChange}
                 size="small"
@@ -246,7 +246,7 @@ export default function Mp3Player({
                 valueLabelDisplay="auto"
                 min={0}
                 max={100}
-                sx={{ color:"#334155" }}
+                sx={{ color:"black" }}
               ></Slider>
             </div>
           </div>

@@ -1,20 +1,10 @@
 ///////////////////
 music timer current second has bug that must be fiexd(try : async await method for dispatching)
-refactor page layout
 //features:
 loop button//mp3player
 build this pages:
-home page
-music app page
-login page
 in future will add :[playlist page and each play list has some musics]//need api(i have not any api)
-//
-uninstall some unused package
 
 tasks :
+refactor page layout
 music timer current second has bug that must be fiexd(try : async await method for dispatching)
-build this pages:
-home page
-music app page
-login page
-uninstall some unused package

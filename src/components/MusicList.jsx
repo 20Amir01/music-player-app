@@ -34,7 +34,7 @@ export default function MusicList({
     }
   }, [musicIsPlay, audioRef, dispatch, playMusic]);
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full bg-slate-300">
       <div className="px-10 py-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 auto-rows-min gap-5 overflow-y-auto h-screen scroll">
         <div className="col-span-2 md:col-span-3 lg:col-span-4 xl:col-span-5">
           {children}

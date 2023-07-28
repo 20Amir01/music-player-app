@@ -1,10 +1,16 @@
 import { musics } from "../../data/items";
-import { useRef,} from "react";
+import { useRef } from "react";
 import Footer from "./Footer";
 import MusicList from "./MusicList";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import { useReducer } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "../pages/Home";
+import MusicApp from "./MusicApp";
+import About from "../pages/About";
+import Login from "../pages/Login";
+import Contact from "../pages/Contact";
 // import chevron_down_icon from "./assets/icons/icons8-chevron-down-24.png"
 const initialState = {
   // musicsData: musics,
@@ -107,10 +113,9 @@ function App() {
   //     }
   //   });
   // }, [toTopBtnVisible]);
- 
 
   return (
-    <div className="relative flex justify-between font-mono mx-auto min-h-screen max-w-[1360px]">
+    <div className="container relative flex justify-between font-mono mx-auto min-h-screen max-w-[1366px]">
       {/* <div
         className={`right-5 bottom-5 ${
           toTopBtnVisible ? "fixed toTopAnimation":"hidden"
@@ -118,40 +123,48 @@ function App() {
       >
         <button onClick={goTop} className="bg-slate-500 p-2 rounded-full rotate-180"><img src={chevron_down_icon}></img></button>
       </div> */}
-      <Header handleOpenNav={handleOpenNav}></Header>
-      <Sidebar isOpenNav={isOpenNav}></Sidebar>
-      <MusicList
-        musicIsPlay={musicIsPlay}
-        currentMusicData={currentMusicData}
-        setCurrentMusic={dispatch}
-        musicIndex={musicIndex}
-        musics={musics}
-        togglePlayPause={togglePlayPause}
-        audioRef={audioRef}
-        dispatch={dispatch}
-        playMusic={playMusic}
-      >
-      </MusicList>
-      <Footer
-        musicIsPlay={musicIsPlay}
-        setMusicIsPlay={dispatch}
-        musics={musics}
-        currentMusicData={currentMusicData}
-        setCurrentMusic={dispatch}
-        musicIndex={musicIndex}
-        togglePlayPause={togglePlayPause}
-        audioRef={audioRef}
-        dispatch={dispatch}
-        playMusic={playMusic}
-        isMute={isMute}
-      ></Footer>
-      {/* <BrowserRouter>
-      <Routes>
-        <Route />
-      </Routes>
-  </BrowserRouter> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
+          <Route path="/contact" element={<Contact/>}></Route>
+          <Route
+            path="/music-app"
+            element={
+              <MusicApp>
+                <Header handleOpenNav={handleOpenNav}></Header>
+                <Sidebar isOpenNav={isOpenNav}></Sidebar>
+                <MusicList
+                  musicIsPlay={musicIsPlay}
+                  currentMusicData={currentMusicData}
+                  setCurrentMusic={dispatch}
+                  musicIndex={musicIndex}
+                  musics={musics}
+                  togglePlayPause={togglePlayPause}
+                  audioRef={audioRef}
+                  dispatch={dispatch}
+                  playMusic={playMusic}
+                ></MusicList>
+                <Footer
+                  musicIsPlay={musicIsPlay}
+                  setMusicIsPlay={dispatch}
+                  musics={musics}
+                  currentMusicData={currentMusicData}
+                  setCurrentMusic={dispatch}
+                  musicIndex={musicIndex}
+                  togglePlayPause={togglePlayPause}
+                  audioRef={audioRef}
+                  dispatch={dispatch}
+                  playMusic={playMusic}
+                  isMute={isMute}
+                ></Footer>
+              </MusicApp>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-
 export default App;

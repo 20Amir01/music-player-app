@@ -2,26 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Monoton';
+  src: url(./assets/fonts/Monoton/Monoton-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Edu-SA';
+  src: url(./assets/fonts/Edu_SA_Beginner/EduSABeginner-VariableFont_wght.ttf) format("truetype");
+}
+
+.font-Monoton {
+  font-family: 'Monoton'
+}
+
+.font-Edu-SA {
+  font-family: "Edu-SA";
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+
 }
 
 html {
   height: 100%;
 }
 
+/* fallback for old browsers */
+/* Chrome 10-25, Safari 5.1-6 */
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*background: #BBD2C5;
+background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);
+background: linear-gradient(to right, #292E49, #536976, #BBD2C5);*/
 body {
-
-  background-color: #e2e8f0;
   -webkit-user-select: none;
   user-select: none;
-  overflow-y: hidden;
-  height: 100vh
+  background-color: #a2a5b9;
 }
-
+.container{
+  background-image: url(./assets/Audiobook.gif);
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
 /* .scroll{
   overflow-y: scroll;
 } */
@@ -115,22 +142,11 @@ nav ul li {
   }
 }
 
-@font-face {
-  font-family: 'Monoton';
-  src: url(./assets/fonts/Monoton/Monoton-Regular.ttf) format("truetype");
-}
 
 .text-transparent {
+  text-align: center;
   font-family: 'Monoton';
-  font-size: 6rem;
-  /* background: url(./assets/headset.jpg); */
-  background: #0F2027;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background-image: url(./assets/color-gif.gif);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -138,4 +154,29 @@ nav ul li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.home-bg {
+
+  background: #BBD2C5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #292E49, #536976, #BBD2C5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-position: center;
+  background-repeat:repeat-y;
+  background-size: cover;
+}
+
+.active {
+  color: black;
+}
+
+form input,textarea{
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  padding: 5px;
 }
