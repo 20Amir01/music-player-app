@@ -1,7 +1,17 @@
 import Nav from "../components/Nav";
 import loginJpg from "../assets/login-png.jpg";
 import googleIcon from "../assets/icons/google-icon.png"
+import { useEffect } from "react";
+import { useState } from "react";
+import Loading from "../components/Loading"
 export default function Login() {
+  const [isLoading,setIsLoading]=useState(true)
+  useEffect(()=>{
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 500);
+  },[])
+  if(isLoading) return(<Loading></Loading>)
   return (
     <div className="min-h-screen h-auto w-full">
       <Nav></Nav>

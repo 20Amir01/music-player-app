@@ -1,6 +1,16 @@
 import Nav from "../components/Nav";
 import contactillustrationGif from "../assets/contact-illustration.gif";
+import { useEffect } from "react";
+import { useState } from "react";
+import Loading from "../components/Loading"
 export default function Contact() {
+  const [isLoading,setIsLoading]=useState(true)
+  useEffect(()=>{
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 500);
+  },[])
+  if(isLoading) return(<Loading></Loading>)
   return (
     <div className="h-screen w-full">
       <Nav></Nav>

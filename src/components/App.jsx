@@ -7,10 +7,11 @@ import Sidebar from "./Sidebar";
 import { useReducer } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
-import MusicApp from "./MusicApp";
+import MusicApp from "../pages/MusicApp";
 import About from "../pages/About";
 import Login from "../pages/Login";
 import Contact from "../pages/Contact";
+import NotFound from "../pages/NotFound"
 // import chevron_down_icon from "./assets/icons/icons8-chevron-down-24.png"
 const initialState = {
   // musicsData: musics,
@@ -134,7 +135,8 @@ function App() {
             element={
               <MusicApp>
                 <Header handleOpenNav={handleOpenNav}></Header>
-                <Sidebar isOpenNav={isOpenNav}></Sidebar>
+                  <div className="flex">
+                  <Sidebar isOpenNav={isOpenNav}></Sidebar>
                 <MusicList
                   musicIsPlay={musicIsPlay}
                   currentMusicData={currentMusicData}
@@ -146,6 +148,7 @@ function App() {
                   dispatch={dispatch}
                   playMusic={playMusic}
                 ></MusicList>
+                  </div>
                 <Footer
                   musicIsPlay={musicIsPlay}
                   setMusicIsPlay={dispatch}
@@ -162,6 +165,7 @@ function App() {
               </MusicApp>
             }
           />
+          <Route path="*" element={<NotFound></NotFound>}/>
         </Routes>
       </BrowserRouter>
     </div>

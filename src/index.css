@@ -43,12 +43,14 @@ body {
   user-select: none;
   background-color: #a2a5b9;
 }
-.container{
+
+.container {
   background-image: url(./assets/Audiobook.gif);
   background-position: center;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
 }
+
 /* .scroll{
   overflow-y: scroll;
 } */
@@ -166,7 +168,7 @@ nav ul li {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   background-position: center;
-  background-repeat:repeat-y;
+  background-repeat: repeat-y;
   background-size: cover;
 }
 
@@ -174,9 +176,29 @@ nav ul li {
   color: black;
 }
 
-form input,textarea{
+form input,
+textarea {
   background-color: #f3f4f6;
   border: 1px solid #d1d5db;
   border-radius: 5px;
   padding: 5px;
+}
+
+.scroll-reset {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.cover-bg {
+  background-image: url(./assets/song-gif.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
 }

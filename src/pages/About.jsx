@@ -1,10 +1,19 @@
 import Nav from "../components/Nav";
+import Loading from "../components/Loading";
+import { useEffect, useState } from "react";
 
 export default function About() {
+  const [isLoading,setIsLoading]=useState(true)
+useEffect(() => {
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 500);
+}, [setIsLoading]);
+if(isLoading) return <Loading></Loading>;
   return (
     <div className="h-screen w-full">
       <Nav></Nav>
-      <div className="p-5 md:p-10 text-2xl text-gray-700 text-ellipsis font-Edu-SA">
+      <div className="p-5 md:p-10 text-2xl text-gray-800 text-ellipsis font-Edu-SA">
         <h3 className="text-5xl">Hello!</h3>
         <br />
         <p>

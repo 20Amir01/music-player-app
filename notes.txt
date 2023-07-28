@@ -1,10 +1,12 @@
 ///////////////////
 music timer current second has bug that must be fiexd(try : async await method for dispatching)
+refactor coding
 //features:
 loop button//mp3player
 build this pages:
 in future will add :[playlist page and each play list has some musics]//need api(i have not any api)
 
 tasks :
-refactor page layout
+refactor page layout//almost done
+
 music timer current second has bug that must be fiexd(try : async await method for dispatching)

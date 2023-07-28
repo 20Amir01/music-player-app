@@ -12,7 +12,7 @@ AppNav.propTypes = {
     const [categoriesIsOpen, setCategoriesIsOpen] = useState(false);
     return (
       <div
-        className={`bg-[#a2a5b9] w-60 h-screen justify-start items-start text-center font-mono p-10 z-50 md:z-10 ${className}`}
+        className={`${className}`}
       >
         <nav>
           <Logo className="text-slate-700"></Logo>

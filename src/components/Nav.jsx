@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 
 export default function Nav() {
@@ -7,7 +7,7 @@ export default function Nav() {
         <Logo className="text-slate-300"></Logo>
         <ul className="flex gap-5 flex-row-reverse font-bold">
           <li>
-            <NavLink to="/login" className={`bg-black hover:bg-blue-500 text-white px-4 py-2 rounded-md`}>Login</NavLink>
+            <Link to="/login" className={`bg-black hover:bg-blue-500 text-white px-4 py-2 rounded-md`}>Login</Link>
           </li>
           <li>
             <NavLink to="/about">about</NavLink>

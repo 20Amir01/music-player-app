@@ -10,8 +10,8 @@ Header.propTypes = {
 };
 export default function Header({ handleOpenNav }) {
   return (
-    <header className="w-full h-auto py-1 px-2 bg-slate-200 fixed z-10  max-w-[1360px] drop-shadow-md">
-      <div className="flex h-12 justify-between pl-0 md:pl-56 relative">
+    <header className="w-full h-auto py-1 px-2 bg-slate-200 z-50  max-w-[1366px] drop-shadow-md col-span-2 sticky top-0">
+      <div className="flex h-12 justify-between relative">
         <div className="flex justify-start items-center gap-2">
           <button>
             <img className="w-14 md:w-8" src={backwardHistoryIcon}></img>

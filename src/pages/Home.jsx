@@ -1,6 +1,15 @@
+import { useState ,useEffect} from "react";
 import { Link,} from "react-router-dom";
 import Nav from "../components/Nav";
+import Loading from "../components/Loading";
 export default function Home() {
+const [isLoading,setIsLoading]=useState(true)
+useEffect(() => {
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 500);
+}, [setIsLoading]);
+if(isLoading) return <Loading></Loading>;
   return (
     <div className="h-screen overflow-hidden w-full">
       <Nav></Nav>
