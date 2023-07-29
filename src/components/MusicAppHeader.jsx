@@ -5,10 +5,10 @@ import arrowDownIcon from "../assets/icons/icons8-expand-arrow-50.png";
 import user from "../assets/icons/user.png";
 import menu from "../assets/icons/icons8-menu-48.png";
 import searchIcon from "../assets/icons/icons8-search-40.png";
-Header.propTypes = {
+MusicAppHeader.propTypes = {
   handleOpenNav: PropTypes.func,
 };
-export default function Header({ handleOpenNav }) {
+export default function MusicAppHeader({ handleOpenNav }) {
   return (
     <header className="w-full h-auto py-1 px-2 bg-slate-200 z-50  max-w-[1366px] drop-shadow-md col-span-2 sticky top-0">
       <div className="flex h-12 justify-between relative">

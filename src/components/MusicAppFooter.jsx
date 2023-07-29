@@ -1,6 +1,6 @@
 import Mp3Player from "./Mp3Player";
 import PropTypes from "prop-types";
-Footer.propTypes = {
+MusicAppFooter.propTypes = {
   musicIsPlay: PropTypes.bool,
   currentMusicData: PropTypes.object,
   dispatch: PropTypes.func,
@@ -11,7 +11,7 @@ Footer.propTypes = {
   playMusic: PropTypes.func,
   isMute: PropTypes.bool,
 };
-export default function Footer({
+export default function MusicAppFooter({
   musicIsPlay,
   currentMusicData,
   dispatch,
