@@ -3,7 +3,7 @@ import contactillustrationGif from "../assets/contact-illustration.gif";
 import { useEffect } from "react";
 import { useState } from "react";
 import Loading from "../components/Loading"
-export default function Contact() {
+export default function ContactUs() {
   const [isLoading,setIsLoading]=useState(true)
   useEffect(()=>{
     setTimeout(() => {

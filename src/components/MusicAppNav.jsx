@@ -1,18 +1,14 @@
-import PropTypes from "prop-types";
 import categories from "../assets/icons/categories.png";
 import saved from "../assets/icons/saved.png";
 import home from "../assets/icons/home.png";
 import Logo from "./Logo";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-AppNav.propTypes = {
-    className: PropTypes.string,
-  };
-  export default function AppNav({ className }) {
+  export default function MusicAppNav() {
     const [categoriesIsOpen, setCategoriesIsOpen] = useState(false);
     return (
       <div
-        className={`${className}`}
+        className="md:sticky md:top-5"
       >
         <nav>
           <Logo className="text-slate-700"></Logo>
