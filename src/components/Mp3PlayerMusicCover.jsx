@@ -7,7 +7,7 @@ Mp3PlayerMusicCover.propTypes = {
   musicIsPlay: PropTypes.bool,
   musicIndex: PropTypes.number,
 };
-export function Mp3PlayerMusicCover({
+export default function Mp3PlayerMusicCover({
   currentMusicData,
   musicIsPlay,
   musicIndex,

@@ -15,6 +15,7 @@ const initialState = {
   musicIndex: 0,
   isOpenNav: false,
   isMute: false,
+  isLoop:false
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -69,6 +70,11 @@ const reducer = (state, action) => {
         ...state,
         isMute: !state.isMute,
       };
+    case "loop_toggle":
+      return{
+        ...state,
+        isLoop:!state.isLoop,
+      }
     default:
       return {
         ...state,
@@ -77,7 +83,7 @@ const reducer = (state, action) => {
 };
 function App() {
   const [
-    { musicIsPlay, musicIndex, currentMusicData, isOpenNav, isMute },
+    { musicIsPlay, musicIndex, currentMusicData, isOpenNav, isMute ,isLoop},
     dispatch,
   ] = useReducer(reducer, initialState);
   const audioRef = useRef();
@@ -115,6 +121,7 @@ function App() {
                 audioRef={audioRef}
                 playMusic={playMusic}
                 isMute={isMute}
+                isLoop={isLoop}
               />
             }
           />

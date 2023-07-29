@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
+import Swal from 'sweetalert2'
 import Loading from "../components/Loading";
 import MusicAppHeader from "../components/MusicAppHeader"
 import MusicAppFooter from "../components/MusicAppFooter"
@@ -17,6 +18,7 @@ MusicApp.propTypes = {
   audioRef: PropTypes.node,
   playMusic: PropTypes.func,
   isMute: PropTypes.bool,
+  isLoop:PropTypes.bool
 };
 export default function MusicApp({
   handleOpenNav,
@@ -29,11 +31,19 @@ export default function MusicApp({
   audioRef,
   playMusic,
   isMute,
+  isLoop
 }) {
+
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
+      Swal.fire({
+        title: 'Note',
+        text: 'All music links and covers are from pixabay website\nThere is no api .\nIf some musics does not play , that is not my problem😁',
+        icon: 'info',
+        confirmButtonText: 'Got it'
+      })
     }, 500);
   }, [setIsLoading]);
   if (isLoading) return <Loading></Loading>;
@@ -66,6 +76,7 @@ export default function MusicApp({
         dispatch={dispatch}
         playMusic={playMusic}
         isMute={isMute}
+        isLoop={isLoop}
       ></MusicAppFooter>
     </div>
   );

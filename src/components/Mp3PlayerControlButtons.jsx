@@ -17,26 +17,26 @@ export default function Mp3PlayerControlButtons({
   musicIsPlay,
 }) {
   return (
-    <div className="flex justify-center w-full h-full">
+    <div className="flex gap-5 justify-center w-full h-full">
       <button
         onClick={() => {
           dispatch({ type: "prevSong" });
           playMusic();
         }}
-        className="m-2 text-white"
+        className="text-white w-8 md:w-7"
       >
-        <img className="w-5 h-5" src={prevSvg}></img>
+        <img className="w-full h-full" src={prevSvg}></img>
       </button>
       <button
-        className="m-2 text-white"
+        className="text-white w-8 md:w-7"
         onClick={() => {
           togglePlayPause();
         }}
       >
         {musicIsPlay ? (
-          <img className="w-5 h-5" src={stopSvg}></img>
+          <img className="w-full h-full" src={stopSvg}></img>
         ) : (
-          <img className="w-5 h-5" src={playSvg}></img>
+          <img className="w-full h-full" src={playSvg}></img>
         )}
       </button>
       <button
@@ -44,9 +44,9 @@ export default function Mp3PlayerControlButtons({
           dispatch({ type: "nextSong" });
           playMusic();
         }}
-        className="m-2 text-white"
+        className="text-white w-8 md:w-7"
       >
-        <img className="w-5 h-5" src={nextSvg}></img>
+        <img className="w-full h-full" src={nextSvg}></img>
       </button>
     </div>
   );

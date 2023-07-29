@@ -5,10 +5,10 @@ Mp3PlayerTimer.propTypes = {
   currentSeconds: PropTypes.number,
   minuteDuration: PropTypes.number,
   secondDuration: PropTypes.number,
-  musicIsPlay:PropTypes.boll,
-  dispatchTimer:PropTypes.func,
-  audioRef:PropTypes.object,
-  seekPosition:PropTypes.number,
+  musicIsPlay: PropTypes.boll,
+  dispatchTimer: PropTypes.func,
+  audioRef: PropTypes.object,
+  seekPosition: PropTypes.number,
 };
 export default function Mp3PlayerTimer({
   currentMinutes,
@@ -21,7 +21,6 @@ export default function Mp3PlayerTimer({
   seekPosition,
 }) {
   useEffect(() => {
-    // if(musicIsPlay===false) return
     const timer = () => {
       // Check if the current track duration is a legible number
       if (!isNaN(audioRef.current.duration) && musicIsPlay) {
@@ -42,7 +41,6 @@ export default function Mp3PlayerTimer({
             audioRef.current.currentTime - currentMinutes * 60
           ),
         });
-
         dispatchTimer({
           type: "MIN_DUR",
           payload: Math.floor(audioRef.current.duration / 60),
