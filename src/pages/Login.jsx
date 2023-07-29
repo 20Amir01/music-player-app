@@ -1,4 +1,5 @@
 import Nav from "../components/Nav";
+import Swal from 'sweetalert2'
 import loginJpg from "../assets/login-png.jpg";
 import googleIcon from "../assets/icons/google-icon.png"
 import { useEffect } from "react";
@@ -25,7 +26,13 @@ export default function Login() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              alert("This is s testing log in");
+              // alert("This is s testing log in");
+              Swal.fire({
+                title: 'Successful login!',
+                text: 'This was a fake login',
+                icon: 'success',
+                confirmButtonText: 'ok'
+              })
             }}
             className="font-Edu-SA grid grid-cols-1 gap-3 p-5 bg-[white] rounded-b-xl md:rounded-none"
           >

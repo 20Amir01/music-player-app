@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2'
 import Nav from "../components/Nav";
 import contactillustrationGif from "../assets/contact-illustration.gif";
 import { useEffect } from "react";
@@ -19,7 +20,12 @@ export default function ContactUs() {
           <img className="md:h-full w-full rounded-t-xl md:rounded-none" src={contactillustrationGif} alt="gif" />
           <form onSubmit={(e)=>{
             e.preventDefault()
-            alert("This is s testing send message")
+            Swal.fire({
+              title: 'Message sent successfuly!',
+              text: 'This was a fake sending message',
+              icon: 'success',
+              confirmButtonText: 'ok'
+            })
             }} className="grid grid-cols-1 gap-1 p-5 bg-[#f3f4f6] rounded-b-xl md:rounded-none">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <input type="text" placeholder="First Name"/>

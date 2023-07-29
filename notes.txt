@@ -1,19 +1,2 @@
-///////////////////
-music timer current second has bug that must be fiexd
-refactor coding
-//features:
-loop button//mp3player
-
-tasks :
-refactor page layout//almost done
-backward and forward button must be change (their location or size)
-navbar app width must be wider
-footer icons must be bigger
-about page in mobile must be readable
-search input must redesing for mobile
-user must be able to hide footer when music is playing
 music timer current second has bug that must be fiexd(try : async await method for dispatching)
 
-
-in future after learning backend:
-playlist in main page of app and each play list have music list to play

@@ -7,9 +7,7 @@ import { useState } from "react";
   export default function MusicAppNav() {
     const [categoriesIsOpen, setCategoriesIsOpen] = useState(false);
     return (
-      <div
-        className="md:sticky md:top-5"
-      >
+      <div>
         <nav>
           <Logo className="text-slate-700"></Logo>
           <div className="flex justify-start my-2">
@@ -30,7 +28,7 @@ import { useState } from "react";
                 <img className="w-4 h-4 mr-3" src={categories}></img>Categories
               </button>
               {categoriesIsOpen && (
-                <ul className="text-left pl-5">
+                <ul className="text-left pl-5" onClick={()=>{alert("for test")}}>
                   <li>pop</li>
                   <li>Rock</li>
                   <li>Jazz</li>
@@ -38,7 +36,7 @@ import { useState } from "react";
                 </ul>
               )}
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center" onClick={()=>{alert("for test")}}>
               <img className="w-4 h-4 mr-3" src={saved}></img>Saved
             </li>
           </ul>
@@ -46,8 +44,8 @@ import { useState } from "react";
             <span className="text-zinc-600">Playlists</span>
           </div>
           <ul>
-            <li className="flex">focus</li>
-            <li className="flex">lofi</li>
+            <li className="flex" onClick={()=>{alert("for test")}}>focus</li>
+            <li className="flex" onClick={()=>{alert("for test")}}>lofi</li>
           </ul>
         </nav>
       </div>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { musics } from "../../data/items";
 import { useReducer } from "react";
@@ -5,7 +6,10 @@ import Mp3PlayerTimer from "./Mp3PlayerTimer";
 import Mp3PlayerMusicTimingSlider from "./Mp3PlayerMusicTimingSlider";
 import Mp3PlayerVolumeController from "./Mp3PlayerVolumeController";
 import Mp3PlayerControlButtons from "./Mp3PlayerControlButtons";
-import { Mp3PlayerMusicCover } from "./Mp3PlayerMusicCover";
+import Mp3PlayerMusicCover from "./Mp3PlayerMusicCover";
+import chevron_down_icon from "../assets/icons/icons8-chevron-down-24.png";
+import loopOnIcon from "../assets/icons/loop on.png";
+import loopOffIcon from "../assets/icons/loop off.webp"
 const initialState = {
   seekPosition: 0,
   minuteDuration: 0,
@@ -52,6 +56,7 @@ Mp3Player.propTypes = {
   musicIndex: PropTypes.number,
   playMusic: PropTypes.func,
   isMute: PropTypes.bool,
+  isLoop: PropTypes.bool,
 };
 export default function Mp3Player({
   musicIsPlay,
@@ -62,8 +67,9 @@ export default function Mp3Player({
   musicIndex,
   playMusic,
   isMute,
+  isLoop
 }) {
-  // const [seekPostion,setSeekPosition]=useState(0)
+  
   const isEmptyCurrentMusicData = Object.keys(currentMusicData).length === 0;
   const [
     {
@@ -86,9 +92,21 @@ export default function Mp3Player({
     // Set the current track position to the calculated seek position
     audioRef.current.currentTime = seekto;
   };
+  const [isShowMp3Player,setIsShowMp3Player]=useState(true)
   return (
-    <div className={`relative ${isEmptyCurrentMusicData ? "hidden" : "block"}`}>
-      <Mp3PlayerMusicTimingSlider
+    <div className={`relative ${isEmptyCurrentMusicData? "hidden" : "block"} mp3-show-anime`}>
+      <button className="bg-black text-red-500 absolute bottom-0 right-0 z-50 rounded-ss-full inline-flex justify-center items-center" onClick={()=>{setIsShowMp3Player(!isShowMp3Player)}}><img className={`${!isShowMp3Player?"rotate-180":""} p-2`} src={chevron_down_icon}></img></button>
+      <audio
+        className="audio w-full h-full bottom-0 z-50 bg-slate-100"
+        // src={musics[musicIndex].path}
+        src={musics[musicIndex].path}
+        ref={audioRef}
+        preload="metadata"
+        muted={isMute}
+        loop={isLoop}
+      ></audio>
+      {isShowMp3Player&&<>
+        <Mp3PlayerMusicTimingSlider
         handleMusicCurrenttimeChanges={handleMusicCurrenttimeChanges}
         seekPosition={seekPosition}
       />
@@ -99,14 +117,6 @@ export default function Mp3Player({
           musicIndex={musicIndex}
         />
         <div className="flex items-center justify-center h-full">
-          <audio
-            className="audio w-full h-full bottom-0 z-50 bg-slate-100"
-            // src={musics[musicIndex].path}
-            src={musics[musicIndex].path}
-            ref={audioRef}
-            preload="metadata"
-            muted={isMute}
-          ></audio>
           <Mp3PlayerControlButtons
             dispatch={dispatch}
             playMusic={playMusic}
@@ -129,9 +139,17 @@ export default function Mp3Player({
             handleVolumeChange={handleVolumeChange}
             dispatch={dispatch}
             isMute={isMute}
-          />
+            />
         </div>
+            <button onClick={()=>{
+              dispatch({type:"loop_toggle"})
+
+            }} className="absolute right-3 top-1 flex">
+              <img className="w-7" src={isLoop?loopOnIcon:loopOffIcon}></img>
+              </button>
       </div>
+      </>}
+
     </div>
   );
 }

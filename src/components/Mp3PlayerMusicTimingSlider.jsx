@@ -13,7 +13,6 @@ export default function Mp3PlayerMusicTimingSlider({ handleMusicCurrenttimeChang
         value={seekPosition}
         min={1}
         max={100}
-        defaultValue={0}
         sx={{ color: "black" }}
       ></Slider>
     </div>

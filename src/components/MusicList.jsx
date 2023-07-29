@@ -14,7 +14,6 @@ MusicList.propTypes = {
   playMusic: PropTypes.func,
 };
 export default function MusicList({
-  children,
   musicIsPlay,
   // currentMusicData,
   dispatch,
@@ -36,19 +35,16 @@ export default function MusicList({
 
   return (
     <div className="w-full h-full bg-slate-300">
-      <div className="px-10 pb-40 pt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 auto-rows-min gap-5 overflow-y-auto h-screen scroll scroll-reset">
-        <div className="col-span-2 md:col-span-3 lg:col-span-4 xl:col-span-5">
-          {children}
-        </div>
+      <div className="px-10 pb-40 pt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 auto-rows-min gap-5 oveflow-x-hidden overflow-y-auto h-screen scroll scroll-reset">
         {musics.map((music, index) => {
           return (
             <Music
-              key={music.id}
-              index={index}
-              music={music}
-              dispatch={dispatch}
-              playMusic={playMusic}
-            ></Music>
+            key={music.id}
+            index={index}
+            music={music}
+            dispatch={dispatch}
+            playMusic={playMusic}
+          ></Music>
           );
         })}
       </div>

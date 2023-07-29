@@ -3,17 +3,18 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Monoton';
+  font-family: "Monoton";
   src: url(./assets/fonts/Monoton/Monoton-Regular.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: 'Edu-SA';
-  src: url(./assets/fonts/Edu_SA_Beginner/EduSABeginner-VariableFont_wght.ttf) format("truetype");
+  font-family: "Edu-SA";
+  src: url(./assets/fonts/Edu_SA_Beginner/EduSABeginner-VariableFont_wght.ttf)
+    format("truetype");
 }
 
 .font-Monoton {
-  font-family: 'Monoton'
+  font-family: "Monoton";
 }
 
 .font-Edu-SA {
@@ -25,7 +26,6 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-
 }
 
 html {
@@ -44,6 +44,35 @@ body {
   background-color: #a2a5b9;
 }
 
+.active {
+  color: black;
+}
+
+form input,
+textarea {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+.text-transparent {
+  text-align: center;
+  font-family: "Monoton";
+  background-image: url(./assets/color-gif.gif);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container {
   background-image: url(./assets/Audiobook.gif);
   background-position: center;
@@ -51,9 +80,6 @@ body {
   background-size: cover;
 }
 
-/* .scroll{
-  overflow-y: scroll;
-} */
 .scroll::-webkit-scrollbar {
   width: 10px;
   /* Mostly for vertical scrollbars */
@@ -66,14 +92,12 @@ body {
   /* Foreground */
   background: #999;
   z-index: 1000;
-
 }
 
 .scroll::-webkit-scrollbar-track {
   /* Background */
   background: #333;
   z-index: 1000;
-
 }
 
 .header {
@@ -84,43 +108,9 @@ body {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
-.musicCover {
-  background-image: url(../assets/headset.jpg);
-
-}
-
-nav ul li {
-  cursor: pointer;
-}
-
-.musicCover {
-  background-image: url(./assets/headset.jpg);
-}
-
-/* .toTopAnimation {
-  animation-name: down_to_top;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes down_to_top {
-  from {
-    transform: translateY(150px) rotate(-360deg);
-    opacity: 0;
-
-  }
-
-  to {
-    transform: translateY(0px) rotate(0deg);
-    opacity: 1;
-  }
-} */
-
+/* loading component */
 .loading {
   width: 100px;
   height: 100px;
@@ -144,27 +134,12 @@ nav ul li {
   }
 }
 
-
-.text-transparent {
-  text-align: center;
-  font-family: 'Monoton';
-  background-image: url(./assets/color-gif.gif);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .home-bg {
-
-  background: #BBD2C5;
+  background: #bbd2c5;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);
+  background: -webkit-linear-gradient(to right, #292e49, #536976, #bbd2c5);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #292E49, #536976, #BBD2C5);
+  background: linear-gradient(to right, #292e49, #536976, #bbd2c5);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   background-position: center;
@@ -172,18 +147,7 @@ nav ul li {
   background-size: cover;
 }
 
-.active {
-  color: black;
-}
-
-form input,
-textarea {
-  background-color: #f3f4f6;
-  border: 1px solid #d1d5db;
-  border-radius: 5px;
-  padding: 5px;
-}
-
+/* music list */
 .scroll-reset {
   -ms-overflow-style: none;
   /* IE and Edge */
@@ -195,10 +159,42 @@ textarea {
   display: none;
 }
 
-/* .cover-bg {
-  background-image: url(./assets/song-gif.gif);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: none;
+/* mp3 player */
+.mp3-show-anime {
+  animation-name: mp3-show;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes mp3-show {
+  from {
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+/* to top button */
+/* .toTopAnimation {
+  animation-name: down_to_top;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes down_to_top {
+  from {
+    transform: translateY(150px) rotate(-360deg);
+    opacity: 0;
+
+  }
+
+  to {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 1;
+  }
 } */

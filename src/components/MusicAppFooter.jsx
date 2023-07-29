@@ -10,6 +10,7 @@ MusicAppFooter.propTypes = {
   musicIndex: PropTypes.number,
   playMusic: PropTypes.func,
   isMute: PropTypes.bool,
+  isLoop: PropTypes.bool,
 };
 export default function MusicAppFooter({
   musicIsPlay,
@@ -20,9 +21,10 @@ export default function MusicAppFooter({
   musicIndex,
   playMusic,
   isMute,
+  isLoop
 }) {
   return (
-    <footer className="max-w-[1360px] fixed bottom-0 w-full h-auto z-20">
+    <footer className="max-w-[1366px] fixed bottom-0 w-full h-auto z-20">
       <Mp3Player
         musicIsPlay={musicIsPlay}
         currentMusicData={currentMusicData}
@@ -32,6 +34,7 @@ export default function MusicAppFooter({
         musicIndex={musicIndex}
         playMusic={playMusic}
         isMute={isMute}
+        isLoop={isLoop}
       />
     </footer>
   );

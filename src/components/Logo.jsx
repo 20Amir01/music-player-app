@@ -10,7 +10,7 @@ export default function Logo({className}) {
     <Link to="/">
       <div className="flex justify-center items-center gap-2">
         <img className="rounded-full w-10" src={musicLogo}></img>
-        <span className={`font-bold ${className}`}>Music App</span>
+        <span className={`font-bold font-Edu-SA tracking-tighter ${className}`}>Music App</span>
       </div>
     </Link>
   );
