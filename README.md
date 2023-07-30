@@ -1,47 +1,13 @@
 <a name="readme-top"></a>
-
 <div align="center">
-  
-  <h3 align="center">Music Player App</h3>
-
+  <h1 align="center">Music Player App</h1>
 </div>
 <br />
 I haven't any real music api for this project and this project hasn't any backend.<br />
 I used some musics from website <strong><a href="https://pixabay.com/music/">pixabay</a></strong> with that music audios and covers links.<br /><br />
 <br />
-
-<br/>
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
-<br/>
-
-<br /><br />
-
 <!-- ABOUT THE PROJECT -->
-
-## This is a music app website
+<h2>This is a music app website demo</h2> 
 
 <br /><br />
 ![Product Name Screen Shot](src/assets/website-demo.gif)
@@ -49,62 +15,39 @@ I used some musics from website <strong><a href="https://pixabay.com/music/">pix
 I coded this project with focusing on <strong><a href="https://react.dev">React.js</a></strong> library and css <strong><a href="https://tailwindcss.com/">tailwind</a></strong> framework.<br /><br />
 I haven't any real music api for this project and this project hasn't any backend.<br />
 I used some musics from website <strong><a href="https://pixabay.com/music/">pixabay</a></strong> with that music audios and covers links.<br /><br />
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br/><br/>
 ### Built With
+<br />
 <br/>
 <p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> </p>
 <br/><br/>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<br/><br/>
-
 <!-- GETTING STARTED -->
-
 ## Getting Started<br/>
-
 This React project has builded with [Vite](https://vitejs.dev/).<br/>
 Vite is a local development server written by Evan You and used by default by Vue and for React project templates. It has support for TypeScript and JSX.
 <br/><br/>
-
 ### Prerequisites<br/>
-
 Note : Node.js must be installed on your system.<br/>
-open your cmd and type:<br/>
+open your cmd and type:
 
 ```
 npm install npm@latest -g
-
 ```
-
-<br /><br />
 
 ### Installation
 
-<br />
 1. Clone the repo
-   ```
-   git clone https://github.com/20Amir01/music-player-app.git
-
 ```
-<br />
+git clone https://github.com/20Amir01/music-player-app.git
+```
 2.Open terminal in terminal directory for install NPM packages<br />
 ```
-
 npm install
-
 ```
-<br />
-3. Type npm run dev to start project<br />
+3. Type npm run dev to start project
 ```
-
-npm run dev;
-
+npm run dev
 ```
-<br /><br />
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <br /><br />
 <!-- CONTRIBUTING -->
@@ -120,35 +63,19 @@ Don't forget to give the project a star! Thanks again!<br />
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)<br />
 4. Push to the Branch (`git push origin feature/AmazingFeature`)<br />
 5. Open a Pull Request<br />
-<br /><br />
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <br /><br />
 <!-- LICENSE -->
 ## License
 <br />
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-<br /><br />
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+Distributed under the MIT License. See LICENSE.txt file for more information.
 
 <br /><br />
 <!-- CONTACT -->
 ## Contact
 <br />
-Amir Mohammad - [instagram:20amirmohammad01](https://instagram.com/20amirmohammad01) - 20amhs00@gmail.com
+-my instagrame : <a href="https://instagram.com/20amirmohammad01" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="20amirmohammad01" height="30" width="40" /></a> <br/>
+-My Email Address : 20amhs00@gmail.com
 <br />
-Project Link: [https://github.com/20Amir01/music-player-app.git](https://github.com/20Amir01/music-player-app.git)
-<br /><br />
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-
-
-
-
-
-
-```
