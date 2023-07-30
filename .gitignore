@@ -1,6 +1,7 @@
 node_modules
 \*.log
 *.txt
+!LICENSE.txt
 src/assets/audios/
 # Output directory
 dist
