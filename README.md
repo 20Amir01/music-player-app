@@ -3,9 +3,6 @@
   <h1 align="center">Music Player App</h1>
 </div>
 <br />
-I haven't any real music api for this project and this project hasn't any backend.<br />
-I used some musics from website <strong><a href="https://pixabay.com/music/">pixabay</a></strong> with that music audios and covers links.<br /><br />
-<br />
 <!-- ABOUT THE PROJECT -->
 <h2>This is a music app website demo</h2> 
 
@@ -14,7 +11,7 @@ I used some musics from website <strong><a href="https://pixabay.com/music/">pix
 <br /><br />
 I coded this project with focusing on <strong><a href="https://react.dev">React.js</a></strong> library and css <strong><a href="https://tailwindcss.com/">tailwind</a></strong> framework.<br /><br />
 I haven't any real music api for this project and this project hasn't any backend.<br />
-I used some musics from website <strong><a href="https://pixabay.com/music/">pixabay</a></strong> with that music audios and covers links.<br /><br />
+I used some musics from <strong><a href="https://pixabay.com/music/">pixabay</a></strong> website with direct links.<br /><br />
 <br/><br/>
 ### Built With
 <br />
@@ -23,7 +20,7 @@ I used some musics from website <strong><a href="https://pixabay.com/music/">pix
 <br/><br/>
 <!-- GETTING STARTED -->
 ## Getting Started<br/>
-This React project has builded with [Vite](https://vitejs.dev/).<br/>
+This React project has built with [Vite](https://vitejs.dev/).<br/>
 Vite is a local development server written by Evan You and used by default by Vue and for React project templates. It has support for TypeScript and JSX.
 <br/><br/>
 ### Prerequisites<br/>
